@@ -46,7 +46,7 @@ Using Custom Trained YOLO Weights:
 Copy and paste your custom .weights file into the 'data' folder and copy and paste your custom .names into the 'data/classes/' folder.
 
 
-## Traing for Object detection module:
+
 To implement object detection using TensorFlow, first we convert the .weights into the corresponding TensorFlow model files and then run the model.
 ```bash
 # Convert darknet weights to tensorflow
@@ -60,7 +60,7 @@ python detect.py --weights ./checkpoints/yolo-416 --size 416 --model yolo --imag
 
 
 
-### Configuring numeral editing module and overall Evaluation
+# Configuring numeral editing module and overall Evaluation
 
 **Note**: Place all your images of interest into a folder, e.g. `blah`, and run
 the eval script:
