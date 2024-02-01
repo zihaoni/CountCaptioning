@@ -9,13 +9,13 @@ The addition to traditional captioning is following:
 - initial modules for futher study
 
 
-## Requirements
+### Requirements
 Python 3.6
 PyTorch 1.4 (along with torchvision)
 cider (already been added as a submodule)
 
 
-# Training for preliminaly captioning module:
+## Training for preliminaly captioning module:
 
 ```
 python train.py --id $id --caption_model fc --noamopt --noamopt_warmup 20000 --label_smoothing 0.0 --input_json data/cocotalk.json --input_label_h5 data/cocotalk_label.h5 --input_fc_dir data/cocobu_fc --input_att_dir data/cocobu_att --seq_per_img 5 --batch_size 10 --beam_size 1 --learning_rate 5e-4 --num_layers 6 --input_encoding_size 512 --rnn_size 2048 --learning_rate_decay_start 0 --scheduled_sampling_start 0 --checkpoint_path $ckpt_path $start_from --save_checkpoint_every 3000 --language_eval 1 --val_images_use 5000 --max_epochs 15
@@ -31,7 +31,7 @@ d_ff=rnn_size
 h is always 8
 ```
 
-# Training for Object counting module:
+## Training for Object counting module:
 
 
 Downloading Official Pre-trained Weights:
@@ -60,7 +60,7 @@ python detect.py --weights ./checkpoints/yolo-416 --size 416 --model yolo --imag
 
 
 
-# Configuring numeral editing module and overall Evaluation
+## Configuring numeral editing module and overall Evaluation
 
 **Note**: Place all your images of interest into a folder, e.g. `blah`, and run
 the eval script:
